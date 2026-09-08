@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CAMI INDUMENTARIA - Moda femenina" />
+  <title>CAMI INDUMENTARIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div>20% OFF pagando por transferencia</div>
+    <div>3 cuotas sin interés</div>
+    <div>Envíos a todo el país</div>
+  </div>
+
+  <header class="header">
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+
+    <a class="brand" href="#inicio">CAMI INDUMENTARIA</a>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Buscar">⌕</button>
+      <a class="icon-btn account-link" href="#contacto" aria-label="Cuenta">♡</a>
+      <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+        Bolsa <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav" id="navMenu">
+    <a href="#inicio">INICIO</a>
+    <a href="#destacados">DESTACADOS</a>
+    <a href="#productos">PRODUCTOS</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
+
+  <div class="search-panel" id="searchPanel">
+    <div class="search-box">
+      <input id="searchInput" type="search" placeholder="¿Qué estás buscando?" />
+      <button id="closeSearch" aria-label="Cerrar búsqueda">✕</button>
+    </div>
+  </div>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-bg placeholder-image">
+        <span>FOTO PRINCIPAL</span>
+      </div>
+      <div class="hero-content">
+        <p>NUEVA TEMPORADA</p>
+        <h1>CAMI<br />INDUMENTARIA</h1>
+        <a href="#productos" class="btn-light">VER PRODUCTOS</a>
+      </div>
+    </section>
+
+    <section class="categories section-wrap">
+      <article class="category-card">
+        <div class="category-image placeholder-image"><span>FOTO</span></div>
+        <a href="#productos">NUEVO INGRESO</a>
+      </article>
+      <article class="category-card">
+        <div class="category-image placeholder-image"><span>FOTO</span></div>
+        <a href="#productos">LOOKS</a>
+      </article>
+      <article class="category-card">
+        <div class="category-image placeholder-image"><span>FOTO</span></div>
+        <a href="#productos">BÁSICOS</a>
+      </article>
+    </section>
+
+    <section class="products-section section-wrap" id="destacados">
+      <div class="section-heading">
+        <p>LO MÁS ELEGIDO</p>
+        <h2>Destacados</h2>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </section>
+
+    <section class="banner-section">
+      <div class="banner-image placeholder-image"><span>FOTO DE CAMPAÑA</span></div>
+      <div class="banner-copy">
+        <p>CAMI INDUMENTARIA</p>
+        <h2>Tu estilo, todos los días.</h2>
+        <a href="#productos">VER COLECCIÓN</a>
+      </div>
+    </section>
+
+    <section class="products-section section-wrap" id="productos">
+      <div class="section-heading">
+        <p>SHOP ONLINE</p>
+        <h2>Todos los productos</h2>
+      </div>
+      <div class="product-toolbar">
+        <span id="productTotal">0 productos</span>
+        <select id="sortSelect" aria-label="Ordenar productos">
+          <option value="featured">Ordenar por</option>
+          <option value="low">Menor precio</option>
+          <option value="high">Mayor precio</option>
+          <option value="name">Nombre</option>
+        </select>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="benefits section-wrap">
+      <div><strong>3 CUOTAS SIN INTERÉS</strong><span>Comprá fácil y seguro</span></div>
+      <div><strong>20% OFF TRANSFERENCIA</strong><span>Beneficio especial</span></div>
+      <div><strong>ENVÍOS A TODO EL PAÍS</strong><span>Recibí tu pedido donde estés</span></div>
+    </section>
+
+    <section class="newsletter">
+      <div>
+        <p>ENTERATE PRIMERO</p>
+        <h2>Newsletter</h2>
+      </div>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Ingresá tu email..." required />
+        <button type="submit">SUSCRIBIRME</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <div class="footer-grid section-wrap">
+      <div>
+        <h3>CAMI INDUMENTARIA</h3>
+        <p>Moda femenina · Buenos Aires</p>
+      </div>
+      <div>
+        <h4>Categorías</h4>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#">Política de cambios</a>
+        <a href="#">Preguntas frecuentes</a>
+      </div>
+      <div>
+        <h4>Contactanos</h4>
+        <a href="https://wa.me/541150147976" target="_blank" rel="noopener">WhatsApp: 11 5014 7976</a>
+        <a href="https://instagram.com/camii.indumentariaa" target="_blank" rel="noopener">Instagram: @camii.indumentariaa</a>
+        <p>Envíos a todo el país</p>
+      </div>
+      <div>
+        <h4>Seguinos</h4>
+        <a href="https://instagram.com/camii.indumentariaa" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 CAMI INDUMENTARIA. Todos los derechos reservados.</div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/541150147976" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Carrito de compras</h3>
+      <button id="closeCart" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">$0</strong></div>
+      <button class="checkout-btn">INICIAR COMPRA</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="toast" id="toast">Producto agregado al carrito</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

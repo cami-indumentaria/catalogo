@@ -4,13 +4,11 @@
   --line:#e8e8e8;
   --gray:#777;
   --soft:#f7f7f7;
-  --pink:#e78eaf;
+  --pink:#ff1493;
 }
 
 
-/* ========================= */
 /* GENERAL */
-/* ========================= */
 
 *{
   box-sizing:border-box;
@@ -53,9 +51,7 @@ img{
 }
 
 
-/* ========================= */
-/* BARRA SUPERIOR */
-/* ========================= */
+/* PROMO */
 
 .promo-bar{
   height:34px;
@@ -72,9 +68,7 @@ img{
 }
 
 
-/* ========================= */
 /* HEADER */
-/* ========================= */
 
 .site-header{
   background:#fff;
@@ -93,9 +87,6 @@ img{
   align-items:center;
 }
 
-
-/* MARCA */
-
 .logo{
   display:flex;
   align-items:center;
@@ -108,9 +99,6 @@ img{
 
   white-space:nowrap;
 }
-
-
-/* BUSCADOR */
 
 .search-trigger{
   border:0;
@@ -132,11 +120,7 @@ img{
 
 .search-icon{
   font-size:23px;
-  line-height:1;
 }
-
-
-/* ACCIONES HEADER */
 
 .header-actions{
   justify-self:end;
@@ -166,9 +150,7 @@ img{
 }
 
 
-/* ========================= */
-/* MENÚ */
-/* ========================= */
+/* NAVEGACIÓN */
 
 .main-nav{
   height:46px;
@@ -191,9 +173,7 @@ img{
 }
 
 
-/* ========================= */
-/* BUSCADOR DESPLEGABLE */
-/* ========================= */
+/* BUSCADOR */
 
 .search-panel{
   position:fixed;
@@ -247,36 +227,19 @@ img{
 }
 
 
-/* ========================= */
-/* BANNER PRINCIPAL */
-/* ========================= */
+/* BANNER */
 
 .hero{
   width:100%;
   background:#000;
-
   overflow:hidden;
 }
-
-
-/*
-  IMPORTANTE:
-  No usamos altura fija.
-
-  De esta manera banner-cami.png
-  conserva su proporción horizontal
-  y no se agranda ni se recorta.
-*/
 
 .hero-banner{
   width:100%;
   height:auto;
 
   display:block;
-
-  background:#000;
-
-  overflow:hidden;
 }
 
 .hero-banner img{
@@ -284,14 +247,192 @@ img{
   height:auto;
 
   display:block;
-
-  object-fit:contain;
 }
 
 
-/* ========================= */
-/* PLACEHOLDERS */
-/* ========================= */
+/* ================================= */
+/* CATEGORÍAS GRANDES ESTILO MARVA */
+/* ================================= */
+
+.categories-big{
+  width:100%;
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:1px;
+
+  background:#fff;
+}
+
+
+/* TARJETA */
+
+.big-category{
+  position:relative;
+
+  height:390px;
+
+  overflow:hidden;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  background:#222;
+
+  color:#fff;
+}
+
+
+/* PLACEHOLDER PARA FUTURAS FOTOS */
+
+.big-category-placeholder{
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(255,20,147,.15),
+      transparent 25%
+    ),
+    linear-gradient(
+      115deg,
+      #111 0%,
+      #393235 50%,
+      #777 100%
+    );
+}
+
+
+/* TEXTURA */
+
+.big-category-placeholder::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.1),
+      rgba(0,0,0,.35)
+    );
+
+  z-index:1;
+}
+
+
+/* FOTO SHORTS */
+
+.big-category-image img{
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  object-position:center;
+
+  transition:.4s ease;
+}
+
+
+/* OSCURECER FOTO */
+
+.category-dark-overlay{
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.78) 0%,
+      rgba(0,0,0,.35) 45%,
+      rgba(0,0,0,.05) 100%
+    );
+
+  z-index:1;
+}
+
+
+/* CONTENIDO */
+
+.big-category-content{
+  position:relative;
+
+  z-index:3;
+
+  padding:44px 55px;
+
+  width:100%;
+}
+
+
+/* TITULO */
+
+.big-category-content h2{
+  margin:0;
+
+  font-size:64px;
+
+  line-height:.95;
+
+  font-weight:700;
+
+  letter-spacing:-.04em;
+
+  color:#fff;
+}
+
+
+/* TEXTO */
+
+.big-category-content p{
+  margin:15px 0 22px;
+
+  font-size:17px;
+
+  line-height:1.4;
+
+  color:#fff;
+}
+
+
+/* BOTÓN */
+
+.category-button{
+  display:inline-block;
+
+  border:2px solid var(--pink);
+
+  border-radius:12px;
+
+  padding:13px 27px;
+
+  font-size:13px;
+
+  font-weight:600;
+
+  transition:.25s ease;
+}
+
+.big-category:hover .category-button{
+  background:var(--pink);
+
+  color:#fff;
+}
+
+.big-category:hover img{
+  transform:scale(1.03);
+}
+
+
+/* PLACEHOLDERS NORMALES */
 
 .placeholder-image{
   background:
@@ -317,7 +458,7 @@ img{
   overflow:hidden;
 }
 
-.placeholder-image:before{
+.placeholder-image::before{
   content:"";
 
   position:absolute;
@@ -339,83 +480,10 @@ img{
 }
 
 
-/* ========================= */
-/* CATEGORÍAS */
-/* ========================= */
-
-.category-strip{
-  display:flex;
-
-  gap:14px;
-
-  padding:28px 0 54px;
-
-  overflow-x:auto;
-
-  scrollbar-width:none;
-}
-
-.category-strip::-webkit-scrollbar{
-  display:none;
-}
-
-.category-item{
-  flex:1 0 0;
-
-  min-width:180px;
-
-  text-align:center;
-}
-
-.category-photo{
-  width:100%;
-
-  aspect-ratio:1.65 / 1;
-
-  min-height:130px;
-}
-
-.category-photo-real{
-  overflow:hidden;
-
-  background:#f4f4f4;
-}
-
-.category-photo-real img{
-  width:100%;
-  height:100%;
-
-  display:block;
-
-  object-fit:cover;
-
-  object-position:center 48%;
-
-  transition:transform .3s ease;
-}
-
-.category-item:hover .category-photo-real img{
-  transform:scale(1.025);
-}
-
-.category-name{
-  display:block;
-
-  margin-top:14px;
-
-  font-size:11px;
-  font-weight:600;
-
-  letter-spacing:.05em;
-}
-
-
-/* ========================= */
 /* PRODUCTOS */
-/* ========================= */
 
 .products-block{
-  padding:48px 0 72px;
+  padding:60px 0 72px;
 }
 
 .products-block h2{
@@ -523,7 +591,6 @@ img{
 
 .price{
   margin:0;
-
   font-size:12px;
 }
 
@@ -577,9 +644,7 @@ img{
 }
 
 
-/* ========================= */
 /* FOTO CAMPAÑA */
-/* ========================= */
 
 .wide-editorial{
   padding:10px 0 55px;
@@ -592,9 +657,7 @@ img{
 }
 
 
-/* ========================= */
-/* INSTAGRAM + NEWSLETTER */
-/* ========================= */
+/* NEWSLETTER */
 
 .social-newsletter{
   border-top:1px solid var(--line);
@@ -658,9 +721,7 @@ img{
 }
 
 
-/* ========================= */
 /* FOOTER */
-/* ========================= */
 
 footer{
   padding:55px 0 22px;
@@ -720,9 +781,7 @@ footer{
 }
 
 
-/* ========================= */
 /* WHATSAPP */
-/* ========================= */
 
 .whatsapp-float{
   position:fixed;
@@ -753,9 +812,7 @@ footer{
 }
 
 
-/* ========================= */
 /* CARRITO */
-/* ========================= */
 
 .cart-drawer{
   position:fixed;
@@ -935,9 +992,7 @@ footer{
 }
 
 
-/* ========================= */
 /* OVERLAY */
-/* ========================= */
 
 .overlay{
   position:fixed;
@@ -962,9 +1017,7 @@ footer{
 }
 
 
-/* ========================= */
-/* MENSAJE CARRITO */
-/* ========================= */
+/* TOAST */
 
 .toast{
   position:fixed;
@@ -998,9 +1051,9 @@ footer{
 }
 
 
-/* ========================================= */
-/* TABLET Y CELULAR */
-/* ========================================= */
+/* ================================= */
+/* TABLET */
+/* ================================= */
 
 @media(max-width:900px){
 
@@ -1015,8 +1068,6 @@ footer{
   }
 
 
-  /* HEADER */
-
   .header-main{
     height:68px;
 
@@ -1025,8 +1076,6 @@ footer{
 
   .logo{
     font-size:14px;
-
-    letter-spacing:.04em;
   }
 
   .desktop-search,
@@ -1043,6 +1092,7 @@ footer{
     gap:14px;
   }
 
+
   .cart-link{
     font-size:0;
   }
@@ -1057,8 +1107,6 @@ footer{
     font-size:10px;
   }
 
-
-  /* MENÚ MOBILE */
 
   .main-nav{
     position:fixed;
@@ -1079,6 +1127,7 @@ footer{
     flex-direction:column;
 
     align-items:flex-start;
+
     justify-content:flex-start;
 
     padding:90px 28px;
@@ -1103,46 +1152,22 @@ footer{
   }
 
 
-  /*
-    BANNER:
-    NO le ponemos height.
-    Así conserva la proporción
-    de banner-cami.png.
-  */
+  /* CATEGORIAS */
 
-  .hero-banner,
-  .hero-banner img{
-    width:100%;
-    height:auto;
+  .big-category{
+    height:300px;
   }
 
-
-  /* CATEGORÍAS */
-
-  .category-strip{
-    width:100%;
-
-    padding:18px 14px 38px;
-
-    gap:10px;
+  .big-category-content{
+    padding:30px;
   }
 
-  .category-item{
-    flex:0 0 46vw;
-
-    min-width:0;
+  .big-category-content h2{
+    font-size:42px;
   }
 
-  .category-photo{
-    aspect-ratio:1.45 / 1;
-
-    min-height:0;
-  }
-
-  .category-name{
-    font-size:10px;
-
-    margin-top:10px;
+  .big-category-content p{
+    font-size:14px;
   }
 
 
@@ -1166,6 +1191,7 @@ footer{
     margin-bottom:28px;
   }
 
+
   .products-title-row .product-toolbar{
     margin-top:0;
   }
@@ -1174,9 +1200,11 @@ footer{
     padding:0 4px;
   }
 
+
   .product-image{
     aspect-ratio:.75 / 1;
   }
+
 
   .product-title{
     font-size:10px;
@@ -1190,14 +1218,6 @@ footer{
     font-size:9px;
   }
 
-  .add-btn{
-    font-size:9px;
-
-    padding:9px 3px;
-  }
-
-
-  /* CAMPAÑA */
 
   .wide-editorial{
     width:100%;
@@ -1212,8 +1232,6 @@ footer{
   }
 
 
-  /* NEWSLETTER */
-
   .social-newsletter-grid{
     grid-template-columns:1fr;
 
@@ -1221,30 +1239,24 @@ footer{
   }
 
 
-  /* FOOTER */
-
   .footer-content{
     grid-template-columns:1fr 1fr;
   }
 
   .footer-brand{
-    grid-column:1 / -1;
+    grid-column:1/-1;
 
     text-align:left;
-  }
-
-  .footer-brand strong{
-    font-size:20px;
   }
 
 }
 
 
-/* ========================================= */
-/* CELULARES CHICOS */
-/* ========================================= */
+/* ================================= */
+/* CELULAR */
+/* ================================= */
 
-@media(max-width:520px){
+@media(max-width:600px){
 
   .page-width{
     width:92vw;
@@ -1256,31 +1268,44 @@ footer{
   }
 
 
-  .header-actions{
-    gap:9px;
-  }
-
-
   /*
-    IMPORTANTE:
-    tampoco forzamos altura
-    del banner en celular.
+    EN CELULAR:
+    una categoría abajo de la otra
   */
 
-  .hero-banner,
-  .hero-banner img{
-    width:100%;
-    height:auto;
+  .categories-big{
+    grid-template-columns:1fr;
   }
 
 
-  .category-item{
-    flex-basis:43vw;
+  .big-category{
+    height:330px;
   }
 
 
-  .products-block{
-    width:96vw;
+  .big-category-content{
+    padding:28px 22px;
+  }
+
+
+  .big-category-content h2{
+    font-size:45px;
+  }
+
+
+  .big-category-content p{
+    font-size:13px;
+
+    margin:10px 0 17px;
+  }
+
+
+  .category-button{
+    padding:11px 18px;
+
+    font-size:11px;
+
+    border-radius:10px;
   }
 
 

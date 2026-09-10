@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CAMI INDUMENTARIA - Moda femenina" />
+  <title>CAMI INDUMENTARIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="promo-bar">
+    <span>20% OFF pagando por transferencia</span>
+    <span>3 cuotas sin interés</span>
+    <span>Envíos a todo el país</span>
+  </div>
+
+  <header class="site-header">
+    <div class="header-main page-width">
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+      <button class="search-trigger desktop-search" id="searchBtn" aria-label="Buscar">
+        <span class="search-icon">⌕</span>
+        <span>¿Qué estás buscando?</span>
+      </button>
+
+      <a class="logo" href="#inicio" aria-label="Cami Indumentaria"><img src="assets/logo-cami.jpeg" alt="Cami Indumentaria"></a>
+
+      <div class="header-actions">
+        <button class="mobile-search-btn" id="mobileSearchBtn" aria-label="Buscar">⌕</button>
+        <a href="#contacto" class="account-link">Iniciar sesión</a>
+        <button class="cart-link" id="cartBtn">Carrito (<span id="cartCount">0</span>)</button>
+      </div>
+    </div>
+
+    <nav class="main-nav" id="navMenu">
+      <a href="#inicio">INICIO</a>
+      <a href="#productos">PRODUCTOS</a>
+      <a href="#destacados">DESTACADOS</a>
+      <a href="#contacto">CONTACTO</a>
+      <a href="#cambios">POLÍTICA DE CAMBIOS</a>
+      <a href="#preguntas">PREGUNTAS</a>
+    </nav>
+  </header>
+
+  <div class="search-panel" id="searchPanel">
+    <div class="search-inner page-width">
+      <input id="searchInput" type="search" placeholder="¿Qué estás buscando?" />
+      <button id="closeSearch" aria-label="Cerrar">✕</button>
+    </div>
+  </div>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-placeholder placeholder-image">
+        <span>FOTO PRINCIPAL / BANNER</span>
+      </div>
+    </section>
+
+    <section class="category-strip page-width" aria-label="Categorías">
+      <a class="category-item" href="#productos">
+        <div class="category-photo placeholder-image"><span>FOTO</span></div>
+        <span class="category-name">REMERAS</span>
+      </a>
+      <a class="category-item" href="#productos">
+        <div class="category-photo placeholder-image"><span>FOTO</span></div>
+        <span class="category-name">JEANS</span>
+      </a>
+      <a class="category-item" href="#productos">
+        <div class="category-photo placeholder-image"><span>FOTO</span></div>
+        <span class="category-name">TOPS</span>
+      </a>
+      <a class="category-item" href="#productos">
+        <div class="category-photo placeholder-image"><span>FOTO</span></div>
+        <span class="category-name">VESTIDOS</span>
+      </a>
+      <a class="category-item" href="#productos">
+        <div class="category-photo category-photo-real"><img src="assets/categoria-shorts.jpeg" alt="Shorts Cami Indumentaria"></div>
+        <span class="category-name">SHORTS</span>
+      </a>
+    </section>
+
+    <section class="products-block page-width" id="destacados">
+      <h2>Destacados</h2>
+      <div class="product-grid" id="featuredGrid"></div>
+      <div class="center-action"><a href="#productos" class="outline-link">VER TODOS LOS PRODUCTOS</a></div>
+    </section>
+
+    <section class="wide-editorial page-width">
+      <div class="editorial-photo placeholder-image"><span>FOTO / CAMPAÑA</span></div>
+    </section>
+
+    <section class="products-block page-width" id="productos">
+      <div class="products-title-row">
+        <h2>Productos</h2>
+        <div class="product-toolbar">
+          <span id="productTotal">0 productos</span>
+          <select id="sortSelect" aria-label="Ordenar productos">
+            <option value="featured">Ordenar por</option>
+            <option value="low">Menor precio</option>
+            <option value="high">Mayor precio</option>
+            <option value="name">Nombre</option>
+          </select>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="social-newsletter">
+      <div class="page-width social-newsletter-grid">
+        <div class="social-block">
+          <p>Seguinos en</p>
+          <a href="https://instagram.com/camii.indumentariaa" target="_blank" rel="noopener">@camii.indumentariaa</a>
+        </div>
+        <div class="newsletter-block">
+          <p>Newsletter</p>
+          <form id="newsletterForm">
+            <input type="email" placeholder="Ingresá tu email..." required />
+            <button type="submit">→</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <div class="footer-content page-width">
+      <div>
+        <h3>Categorías</h3>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#cambios" id="cambios">Política de cambios</a>
+        <a href="#preguntas" id="preguntas">Preguntas</a>
+      </div>
+      <div>
+        <h3>Contactanos</h3>
+        <a href="https://wa.me/541150147976" target="_blank" rel="noopener">11 5014 7976</a>
+        <a href="https://instagram.com/camii.indumentariaa" target="_blank" rel="noopener">Instagram</a>
+        <p>Buenos Aires</p>
+        <p>Envíos a todo el país</p>
+      </div>
+      <div class="footer-brand">
+        <strong>CAMI INDUMENTARIA</strong>
+        <p>Moda femenina</p>
+      </div>
+    </div>
+    <div class="footer-bottom page-width">Copyright CAMI INDUMENTARIA - 2026. Todos los derechos reservados.</div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/541150147976" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Carrito de compras</h3>
+      <button id="closeCart" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="shipping-box">
+      <label for="postalCode">Medios de envío</label>
+      <div><input id="postalCode" placeholder="Tu código postal" /><button type="button">Calcular</button></div>
+    </div>
+    <div class="cart-footer">
+      <div class="subtotal"><span>Subtotal (sin envío)</span><strong id="cartSubtotal">$0</strong></div>
+      <button class="checkout-btn">INICIAR COMPRA</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+  <div class="toast" id="toast">¡Agregado al carrito!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
